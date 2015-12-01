@@ -84,7 +84,7 @@ img {
 }
 
 .main-image {
-    margin: 2% auto;
+    margin: 1% auto;
     /*text-align: center;*/
 }
 
@@ -145,10 +145,10 @@ h3 {
     }
     .project {
         width: 260px;
-        margin: 0 260px 30px 0;
+        margin: 0 260px 70px 0;
     }
     figcaption {
-        margin: -120px 0 0 260px;
+        margin: -150px 0 0 270px;
     }
 
 }
@@ -164,7 +164,7 @@ h3 {
 
     .project {
         width: 280px;
-        margin: 0 auto;
+        margin: 0.5em auto;
     }
     .project:last-of-type {
         width: 280px;
@@ -173,7 +173,7 @@ h3 {
     .udacity-image {
         display: none;
    }
-    .big-image {
+    /*.big-image {
         display: none;
-   }
+    }*/
 }

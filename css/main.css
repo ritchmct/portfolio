@@ -1,179 +1,198 @@
 * {
-    /*border: 1px solid red !important;*/
-    font-family: 'Lato', sans-serif;
-    color: #747774;
-    /*color: #f8981c;*/
+  font-family: 'Lato', sans-serif;
+  color: #747774;
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  color: black;
+  display: inline-block;
+  width: 3em;
+}
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 
 .grid {
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  border-bottom: 4px solid #bcbbbb;
 }
 
 .row {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center-vertical {
+  display: flex;
+  align-items: center;
 }
 
 .col-1 {
-    width: 8.33%;
+  width: 8.33%;
 }
 
 .col-2 {
-    width: 16.66%;
+  width: 16.66%;
 }
 
 .col-3 {
-    width: 25%;
+  width: 25%;
 }
 
 .col-4 {
-    width: 33.33%;
-    /*min-width: 300px;*/
+  width: 33.33%;
 }
 
 .col-5 {
-    width: 41.66%;
+  width: 41.66%;
 }
 
 .col-6 {
-    width: 50%;
+  width: 50%;
 }
 
 .col-7 {
-    width: 58.33%;
+  width: 58.33%;
 }
 
 .col-8 {
-    width: 66.66%;
+  width: 66.66%;
 }
 
 .col-9 {
-    width: 75%;
+  width: 75%;
 }
 
 .col-10 {
-    width: 83.33%;
+  width: 83.33%;
 }
 
 .col-11 {
-    width: 91.66%;
+  width: 91.66%;
 }
 
 .col-12 {
-    width: 100%;
+  width: 100%;
 }
 
 .heading {
-    border-bottom: 4px solid #bcbbbb;
+  border-bottom: 4px solid #bcbbbb;
 }
 
 .main-image {
-    margin: 1% auto;
-    /*text-align: center;*/
+  margin: 1% auto;
 }
 
 .big-image {
-    width: 100%;
+  width: 100%;
 }
 
-.udacity-logo {
-    max-height: 100%;
-    width: 100%;
-    float: left;
+.star-image {
+  width: 100%;
 }
 
 .right-justify {
-    text-align: right;
+  text-align: right;
 }
 
-.fit {
-    text-align: center;
+.center-text {
+  text-align: center;
 }
 
 .project {
-    margin: 0 10px 10px 0;
-    width: calc(33.33% - (20px/3));
-    min-width: 240px;
+  margin: 0 10px 10px 0;
+  /*CSS Validator doesn't like calc. Commented out to validate*/
+  width: calc(33.33% - (20px/3));
+  min-width: 240px;
 }
 
 .project:last-of-type {
-    margin: 0 0 20px 0;
+  margin: 0 0 20px 0;
 }
 
 h1 {
-    font-size: 48px;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
-    font-weight: 100;
+  font-size: 48px;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  font-weight: 100;
 }
 
 h2 {
-    color: #bcbbbb;
-    font-weight: 400;
+  color: #bcbbbb;
+  font-weight: 400;
 }
 
 h3 {
-    font-size: 36px;
-    font-weight: 400;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
 }
 
 .tab {
-    margin-left: 0.5em;
+  margin-left: 10px;
 }
+
+/* Footer */
+
+#social {
+  /*border-top: 4px solid #bcbbbb;*/
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* Media */
 
 @media only screen and (max-width: 800px) and (min-width: 551px) {
-    h1 {
-        font-size: 36px;
-    }
-    .project {
-        width: 260px;
-        margin: 0 260px 70px 0;
-    }
-    figcaption {
-        margin: -150px 0 0 270px;
-    }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .project {
+    width: 50vw;
+    margin: 0 50vw 70px 0;
+  }
+
+  .project:last-of-type {
+    width: 50vw;
+    margin: 0 50vw 70px 0;
+  }
+
+  figcaption {
+    width: 45vw;
+    /*Firefox wraps URLs nicely. Chrome doesn't. word-wrap helps but isn't perfect*/
+    word-wrap: break-word;
+    margin: -150px 0 0 50vw;
+  }
 
 }
+
 @media only screen and (max-width: 550px) {
-    h1 {
-        font-size: 36px;
-        text-align: left;
-    }
 
-    p {
-        text-align: left;
-    }
+  h1 {
+    font-size: 36px;
+  }
 
-    .project {
-        width: 280px;
-        margin: 0.5em auto;
-    }
-    .project:last-of-type {
-        width: 280px;
-        margin: 0 auto;
-    }
-    .udacity-image {
-        display: none;
-   }
-    /*.big-image {
-        display: none;
-    }*/
+  .project {
+    width: 100vw;
+    margin: 10px auto;
+  }
+
+  .project:last-of-type {
+    width: 100vw;
+    margin: 10px auto;
+  }
+
 }

@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     responsive_images: {
-      dev: {
+      resize_large: {
         options: {
           engine: 'im',
           sizes: [{
@@ -25,19 +25,64 @@ module.exports = function(grunt) {
           },{
             width: 800,
             quality: 30
+          }]
+        },
+
+        files: [{
+          expand: true,
+          src: ['*large.{gif,jpg,png}'],
+          cwd: 'images_src/',
+          dest: 'images/'
+        }]
+      },
+
+      resize_medium: {
+        options: {
+          engine: 'im',
+          sizes: [{
+            width: 1600,
+            quality: 30
+          },{
+            width: 1200,
+            quality: 30
+          },{
+            width: 800,
+            quality: 30
           },{
             width: 600,
             quality: 30
           }]
         },
 
-        /*
-        You don't need to change this part if you don't change
-        the directory structure.
-        */
         files: [{
           expand: true,
-          src: ['*.{gif,jpg,png}'],
+          src: ['*medium.{gif,jpg,png}'],
+          cwd: 'images_src/',
+          dest: 'images/'
+        }]
+      },
+
+      resize_small: {
+        options: {
+          engine: 'im',
+          sizes: [{
+            width: 1200,
+            quality: 30
+          },{
+            width: 800,
+            quality: 30
+          },{
+            width: 600,
+            quality: 30
+          },{
+            width: 400,
+            quality: 30
+          }]
+        },
+
+        files: [{
+          expand: true,
+          src: ['*small.{gif,jpg,png}'],
           cwd: 'images_src/',
           dest: 'images/'
         }]
